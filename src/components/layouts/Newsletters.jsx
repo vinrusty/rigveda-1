@@ -1,29 +1,33 @@
-import React from 'react';
+import React,{useEffect, useRef, useState} from 'react';
 import img from '../../assets/images/background/img-newletter.png'
+import AudioPlayer from 'react-h5-audio-player'
 
-export const Newsletters = () => {
+export const Newsletters = ({mandalam, aadhyayaa, audioSource, setAudioSource, aad, audioRef}) => {
   return (
     <section className="new-letter">
         <div className="container">
             <div className="new-letter-inner flex">
-                <div className="new-letter-content">
-                    <h3 className="heading">Newsletters</h3>
-                    <p className="sub-heading">Most popular gaming digital nft market place </p>
-                    <div className="form-subcribe">
-                        <form id="subscribe-form" action="#" method="GET" acceptCharset="utf-8"
-                            className="form-submit">
-                            <input name="email" className="email" type="email"
-                                placeholder="Enter Email Address" required />
-                            <button name="submit" type="submit" id="submit"
-                                className="sc-button style letter style-2"><span>Browse More</span> </button>
-                        </form>
-                    </div>
-                </div>
-                <div className="new-letter-img">
-                    <img src={img} alt="Bidzen" />
-                </div>
+            <div
+                className = 'audio-player'
+                >
+                <AudioPlayer
+                    src={audioSource > 9 ? `/assets/audios/${mandalam}/${aadhyayaa}/0${audioSource}E.mp3` : `/assets/audios/${mandalam}/${aad}/00${audioSource}E.mp3`}
+                    ref={audioRef}
+                    className='player'
+                    autoPlay
+                    onEnded={() => {
+                        setAudioSource(audioSource+1);
+                    }}
+                    onClickNext={() => {
+                        setAudioSource(audioSource+1);
+                    }}
+                    onClickPrevious={() => {
+                        setAudioSource(audioSource-1);
+                    }}
+                />
             </div>
         </div>
+    </div>
     </section>
     );
 };

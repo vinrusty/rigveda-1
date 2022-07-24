@@ -18,7 +18,7 @@ const LiveAution = props => {
                             <div className="inner">
                                 <div className="group">
                                     <div className="icon"><i className="ripple"></i></div>
-                                    <h3>Live Auctions</h3>
+                                    <h3> Auctions</h3>
                                 </div>
                                 <p className="desc">Most popular gaming digital nft market place </p>
                             </div>

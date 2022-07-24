@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
 import Countdown from "react-countdown";
+import { getAllMandalam } from '../../../data/data';
 
 const LiveAution = props => {
     const data = props.data;
@@ -17,7 +18,7 @@ const LiveAution = props => {
                         <div className="inner">
                             <div className="group">
                                 <div className="icon"><i className="ripple"></i></div>
-                                <h3>Live Auctions</h3>
+                                <h3> Auctions</h3>
                             </div>
                             <p className="desc">Most popular gaming digital nft market place </p>
                         </div>
@@ -50,9 +51,9 @@ const LiveAution = props => {
                         scrollbar={{ draggable: true }}
                         >
                         {
-                            data.map((item,index) => (
+                            getAllMandalam().map((mandalam,index) => (
                                 <SwiperSlide key={index}>
-                                    <LiveAutionItem item={item} />
+                                    <LiveAutionItem mandalam={mandalam} />
                                 </SwiperSlide>
                             ))
                         }
@@ -73,7 +74,7 @@ const LiveAutionItem = props => (
         <div className="slider-item">
             <div className="sc-product-item">
                 <div className="product-img">
-                    <img src={props.item.img} alt="Bidzen" />
+                    <h1 style={{fontSize: '5rem'}}>{props.mandalam.id}</h1>
                     <div className="countdown">
                     <Countdown date={Date.now() + 500000000}>
                         <span>You are good to go!</span>

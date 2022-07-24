@@ -1,74 +1,11 @@
 import React , { useState } from 'react';
-import { Link } from 'react-router-dom'
-import img1 from '../../assets/images/icon/icon-1.svg'
-import img2 from '../../assets/images/icon/icon-2.svg'
-import img3 from '../../assets/images/icon/icon-3.svg'
-import img4 from '../../assets/images/icon/icon-4.svg'
-import img5 from '../../assets/images/icon/icon-5.svg'
-import img6 from '../../assets/images/icon/icon-6.svg'
-import img7 from '../../assets/images/icon/icon-7.png'
-import img8 from '../../assets/images/icon/icon-8.svg'
-import img9 from '../../assets/images/icon/icon-9.svg'
+import { Link, useParams } from 'react-router-dom'
+import { getMandalamById } from '../../data/data';
 
-const WalletConnect = () => {
-    const [data] = useState(
-        [
-            {
-                img: img1,
-                title: 'Meta Mask',
-                text: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,',
-                class: ''
-            },
-            {
-                img: img2,
-                title: 'Bitski',
-                text: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,',
-                class: ''
-            },
-            {
-                img: img3,
-                title: 'Fortmatic',
-                text: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,',
-                class: ''
-            },
-            {
-                img: img4,
-                title: 'Wallet Connect',
-                text: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,',
-                class: ''
-            },
-            {
-                img: img5,
-                title: 'Coinbase Wallet',
-                text: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,',
-                class: ''
-            },
-            {
-                img: img6,
-                title: 'Authereum',
-                text: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,',
-                class: ''
-            },
-            {
-                img: img7,
-                title: 'kaikas',
-                text: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,',
-                class: 'mg-bt-0'
-            },
-            {
-                img: img8,
-                title: 'Torus',
-                text: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,',
-                class: 'mg-bt-0'
-            },
-            {
-                img: img9,
-                title: 'Bitcoin',
-                text: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,',
-                class: 'mg-bt-0'
-            },
-        ]
-    )
+const WalletConnect = ({mandalam}) => {
+
+const {id} = useParams();
+
 return (
     <section className="tf-section connect-wallet">
         <div className="container">
@@ -80,15 +17,17 @@ return (
                     </div>
                 </div>
                 {
-                    data.map((item,index)=> (
+                    getMandalamById(Number(mandalam)).aadhayaa.map((m,index)=> (
                         <div key={index} className="col-lg-4 col-md-4">
-                            <div className={`sc-wallet ${item.class}`}>
+                            <div className={`sc-wallet`}>
                                 <div className="icon">
-                                    <img src={item.img} alt="Bidzen" />
+                                    <Link to={`/mandalam/${id}/${m.id}`}>
+                                        <h1 style={{fontSize: "4rem"}}>{m.id}</h1>
+                                    </Link>
                                 </div>
                                 <div className="content">
-                                    <h4><Link to="/login">{item.title}</Link></h4>
-                                    <p>{item.text}</p>
+                                    <h4><Link to="/login"></Link></h4>
+                                    <p style={{fontSize: "2rem"}}>{m.sukta.length} Suktas</p>
                                 </div>
                             </div>
                         </div>
