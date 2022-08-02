@@ -18,12 +18,12 @@ const ConnectWallet = () => {
                 <div className="col-md-12">
                     <div className="page-title-inner flex">
                         <div className="page-title-heading">
-                            <h2 className="heading">Wallet-Connect</h2>
+                            <h2 className="heading">Aadhyayaas</h2>
                         </div>
                         <div className="breadcrumbs">
                             <ul>
-                                <li><Link to="/">Home</Link></li>
-                                <li>Wallet-connect</li>
+                                <li><Link to="/item">Mandalas</Link></li>
+                                <li>Aadhyayaas</li>
                             </ul>
                         </div>
                     </div>
@@ -33,7 +33,7 @@ const ConnectWallet = () => {
     </section>
     <WalletConnect mandalam={id} />
     <Newsletters />
-    <Footer />
+    {/* <Footer /> */}
   </div>;
 };
 

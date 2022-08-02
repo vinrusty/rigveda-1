@@ -15,10 +15,10 @@ const menus = [
             // },
         ]
     },
-    {
-        id: 2,
-        name: 'About US',
-        namesub: [
+    // {
+    //     id: 2,
+    //     name: 'About US',
+    //     namesub: [
             // {
             //     id: 1,
             //     sub: 'Explore 01',
@@ -39,14 +39,14 @@ const menus = [
             //     sub: 'Item',
             //     links: '/item'
             // },
-            {
-                id: 1,
-                sub: 'About US',
-                links: '/item-details'
-            },
+    //         {
+    //             id: 1,
+    //             sub: 'About US',
+    //             links: '/item-details'
+    //         },
             
-        ],
-    },
+    //     ],
+    // },
     // {
     //     id: 3,
     //     name: 'Community',

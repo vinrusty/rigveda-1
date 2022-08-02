@@ -51,12 +51,12 @@ const ItemDetails = () => {
                     <div className="col-md-12">
                         <div className="page-title-inner flex">
                             <div className="page-title-heading">
-                                <h2 className="heading">Auctions</h2>
+                                <h2 className="heading">Suktha</h2>
                             </div>
                             <div className="breadcrumbs">
                                 <ul>
-                                    <li><Link to="/">Home</Link></li>
-                                    <li>Auctions Details</li>
+                                    <li><Link to="/item">Mandalas</Link></li>
+                                    <li>suktha</li>
                                 </ul>
                             </div>
                         </div>
@@ -65,8 +65,8 @@ const ItemDetails = () => {
                 <Newsletters mandalam={mandalam} aadhyayaa={aadhyayaa} audioSource={audioSource} setAudioSource={setAudioSource} aad={aad} audioRef={audioRef} />
             </div>
         </section>
-        <section className="tf-section item-details-page">
-        <div className='aad-lyrics'>
+        <section className="tf-section item-details-page" style={{}}>
+        <div className='aad-lyrics' style={{marginTop: "20px", height: "50vh", overflow: "auto"}}>
             {data.sukta.map((item, index) => {
                     return <Texts language={language} key={index} />;
 
@@ -79,7 +79,7 @@ const ItemDetails = () => {
                         ref={item.id === audioSource ? scrollRef : null}
                         style={{cursor: "pointer", padding: "2rem"}}
                         >
-                        <h3
+                        <center><h3
                             style={{ color: item.id === audioSource ? "blueviolet" : "black" }}
                         >
                             <b>{Sanscript.t(item.a, "devanagari", language)}</b>
@@ -88,7 +88,7 @@ const ItemDetails = () => {
                             style={{ color: item.id === audioSource ? "blueviolet" : "black" }}
                         >
                             {Sanscript.t(item.c, "devanagari", language)}
-                        </h4>
+                        </h4></center>
                         <br />
                         </div>
                     );
@@ -96,8 +96,10 @@ const ItemDetails = () => {
                 })}
             </div>
         </section>
-        <Footer />
+        {/* <Footer /> */}
   </div>;
 };
 
 export default ItemDetails;
+
+

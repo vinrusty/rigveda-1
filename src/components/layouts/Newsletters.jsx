@@ -6,27 +6,29 @@ export const Newsletters = ({mandalam, aadhyayaa, audioSource, setAudioSource, a
   return (
     <section className="new-letter">
         <div className="container">
-            <div className="new-letter-inner flex">
+            {/* <div className="new-letter-inner flex " >
             <div
-                className = 'audio-player'
+                className = 'audio-player' style={{"display":"inline"}}
                 >
-                <AudioPlayer
-                    src={audioSource > 9 ? `/assets/audios/${mandalam}/${aadhyayaa}/0${audioSource}E.mp3` : `/assets/audios/${mandalam}/${aad}/00${audioSource}E.mp3`}
-                    ref={audioRef}
-                    className='player'
-                    autoPlay
-                    onEnded={() => {
-                        setAudioSource(audioSource+1);
-                    }}
-                    onClickNext={() => {
-                        setAudioSource(audioSource+1);
-                    }}
-                    onClickPrevious={() => {
-                        setAudioSource(audioSource-1);
-                    }}
-                />
+                
             </div>
-        </div>
+        </div> */}
+       <center> <AudioPlayer
+                
+                src={audioSource > 9 ? `/assets/audios/${mandalam}/${aadhyayaa}/0${audioSource}E.mp3` : `/assets/audios/${mandalam}/${aad}/00${audioSource}E.mp3`}
+                ref={audioRef}
+                className='player'
+                autoPlay
+                onEnded={() => {
+                    setAudioSource(audioSource+1);
+                }}
+                onClickNext={() => {
+                    setAudioSource(audioSource+1);
+                }}
+                onClickPrevious={() => {
+                    setAudioSource(audioSource-1);
+                }}
+            /></center>
     </div>
     </section>
     );

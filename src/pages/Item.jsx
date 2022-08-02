@@ -16,12 +16,12 @@ const Item = () => {
                 <div className="col-md-12">
                     <div className="page-title-inner flex">
                         <div className="page-title-heading">
-                            <h2 className="heading">Item (Auctions)</h2>
+                            <h2 className="heading">Rig veda(Mandalas)</h2>
                         </div>
                         <div className="breadcrumbs">
                             <ul>
                                 <li><Link to="/">Home</Link></li>
-                                <li>Item (Auctions)</li>
+                                <li>Mandalas</li>
                             </ul>
                         </div>
                     </div>
@@ -30,8 +30,8 @@ const Item = () => {
         </div>
     </section>
     <LiveAutions data={dataPopularCollection} />
-    <Newsletters />
-    <Footer />
+    {/* <Newsletters /> */}
+    {/* <Footer /> */}
   </div>;
 };
 

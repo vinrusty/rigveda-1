@@ -12,8 +12,8 @@ return (
             <div className="row">
                 <div className="col-md-12">
                     <div className="sc-heading">
-                        <h3>Wallet- Connect</h3>
-                        <p className="desc">Most popular gaming digital nft market place </p>
+                        <h3>Adhayaya</h3>
+                        {/* <p className="desc">Most popular gaming digital nft market place </p> */}
                     </div>
                 </div>
                 {

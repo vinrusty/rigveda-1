@@ -730,9 +730,11 @@ h3,
 h4,
 h5,
 h6 {
+    margin-bottom:2rem;
     font-weight   : 700;
     text-rendering: optimizeLegibility;
     color: var(--color-1);
+
 }
 
 h1 {
@@ -1033,7 +1035,7 @@ a:focus {
     --bg-footer: #14161B;
     --bg-section-color-1: #fff ;
     --bg-section-color-2: rgba(99, 69, 237, 0.07); 
-    --color-1 : #14161B;
+    --color-1 : #425fdf;
     --color-2 :#616161;
     --color-3 : rgba(99, 69, 237, 0.07);
     --color-4 : #fff;

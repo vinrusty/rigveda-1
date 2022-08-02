@@ -3,14 +3,14 @@ import img1 from '../images/slider/img-slider-1.png'
 
 const dataSlider = [
     {
-        title: "Discover and collect your favorite digital NTFs",
-        description: "Quis autem vel eum iure reprehenderit qui in ea voluptates esse quam nihil molestiae consequatur veillum",
-        img: img1,
+        title: "ऋग्वेदः",
+        description: "",
+        img:"https://images.mypandit.com/myPandit_web/images/Content/Rishi-Panchami-39.webp",
     },
     {
-        title: "Discover and collect your favorite digital NTFs",
-        description: "Quis autem vel eum iure reprehenderit qui in ea voluptates esse quam nihil molestiae consequatur veillum",
-        img: img1,
+        title: "ऋग्वेदः",
+        description: "",
+        img:"https://images.mypandit.com/myPandit_web/images/Content/Rishi-Panchami-39.webp",
     },
     
 ]

@@ -21,7 +21,7 @@ const LiveAutions = props => {
                                 <div className="icon"><i className="ripple"></i></div>
                                 <h3>Listen to Rig Veda</h3>
                             </div>
-                            <p className="desc">Most popular gaming digital nft market place </p>
+                            {/* <p className="desc">Most popular gaming digital nft market place </p> */}
                         </div>
                     </div>
                 </div>
@@ -107,7 +107,7 @@ const LiveAutionsItem = props => (
             <div className="product-content">
                 <h5 className="title"><Link to="/item-details"></Link> </h5>
                 <div className="product-price" style={{textAlign: 'center'}}>
-                    <div className="title">{props.mand.aadhayaa.length} Aadhyayaas</div>
+                    <div className="title">{props.mand.aadhayaa.length} Adhayaya</div>
                 </div>
             </div>
         </div>
