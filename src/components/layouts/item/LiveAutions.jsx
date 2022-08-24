@@ -107,7 +107,7 @@ const LiveAutionsItem = props => (
             <div className="product-content">
                 <h5 className="title"><Link to="/item-details"></Link> </h5>
                 <div className="product-price" style={{textAlign: 'center'}}>
-                    <div className="title">{props.mand.aadhayaa.length} Adhayaya</div>
+                    <div className="title">{props.mand.aadhayaa.length} Adhyaya</div>
                 </div>
             </div>
         </div>
